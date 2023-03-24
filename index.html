@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dados Sexys!</title>
+        <link rel="stylesheet" href="./styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+<body>
+
+    <section id="agregar-jugador">
+        <h1 class="titulo">Jugadores</h1>
+        <h2 class="subtitulo">Agregar Jugadores</h2>
+        
+        <div id="contenedorForm" class="form-jugador">
+            <div class="inputs">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="nombre">            
+            </div> 
+            <div class="inputs">
+                <label for="genero">Genero:</label>
+                <select name="genero" id="genero">
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>
+                </select>                   
+            </div>            
+        </div>
+        <button id="btn-add-jugador">Agregar</button>
+
+        <div id='contenedorJugadores' class="jugadores">
+            
+        </div>
+        
+        <button id="btn-iniciar">Jugar</button>
+    </section>
+
+    <section id="juego">
+        <h1 class="titulo">Juego</h1>
+        <h2 class="subtitulo">Turno</h2>
+
+        <div id="contenedorQuienEjecuta" class="quien-ejecuta">
+            
+        </div>
+
+        <div id="contenedorAQuienEjecuta" class="a-quien-ejecuta">
+            
+        </div>
+        
+        <button id="btn-iniciar-dados">Iniciar dados</button>
+        <button id="btn-siguiente-turno">Siguiente Turno</button>
+
+        <div id="accion">
+
+        </div>
+
+        <div id="lugar">
+
+        </div>
+    </section>
+
+    <script src="./scripts.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7c1204;
+}
+
+#agregar-jugador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 32px;
+}
+
+.subtitulo {
+    color: white;
+    font-size: 20px;
+}
+
+.form-jugador {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label { 
+    color: white;
+}
+
+#btn-add-jugador, #btn-iniciar, #btn-iniciar-dados, #btn-siguiente-turno {
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 30px;
+}
+
+.jugadores {
+    margin-top: 30px;
+    color: white;
+}
+
+#juego {
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulo-turno {
+    color: white;
+    font-size: 14px;
+}
+
+.jugadores-turno {
+    color: white;
+    font-size: 14px;
+}
+
+.quien-ejecuta, .a-quien-ejecuta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+#accion, #lugar {
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid white;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
