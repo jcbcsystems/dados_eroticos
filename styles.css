@@ -97,7 +97,7 @@ input, select {
     border-radius: 20px;
     width: 200px;
     height: 200px;
-    margin: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     color: white;
