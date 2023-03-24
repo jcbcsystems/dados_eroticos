@@ -19,6 +19,8 @@ let jugador
 let jugadorTurno
 let jugadorTurnoContrario
 
+const STEP = 10;
+
 let dados = [
     {
         accion: "Besar",
@@ -114,8 +116,6 @@ function iniciar() {
     btnIniciar.addEventListener('click', iniciarJuego)
     btnIniciarDados.addEventListener('click', iniciarDados)
     btnSiguienteTurno.addEventListener('click', iniciarJuego)
-    btnIniciar.style.display = 'none'
-    sectionJuego.style.display = 'none'
 }
 
 function addJugador() {
@@ -155,27 +155,42 @@ function iniciarJuego(){
 
     jugadorTurnoContrario = jugadoresGeneroContrario[turno]
     
-    jugador = `<h2 class="subtitulo-turno">El turno le toca a:</h2> <p> ${jugadorTurno.nombre} - ${jugadorTurno.genero} </P>`
-    
     jugador = `<p> <strong> ${jugadorTurno.nombre} </strong> Ejecuta A <strong>${jugadorTurnoContrario.nombre}</strong></P>`
     contenedorQuienEjecuta.innerHTML = jugador
-
-    //jugador = `<h2 class="subtitulo-turno">A quien debe ejecutar la accion :</h2> <p> ${jugadorTurnoContrario.nombre} - ${jugadorTurnoContrario.genero} </P>`
-    //contenedorAQuienEjecuta.innerHTML = jugador
 }
 
-function iniciarDados() {
+async function iniciarDados() {
     seccionAccion.style.display = 'flex'
-    seccionLugar.style.display = 'flex'
     btnIniciarDados.style.display = 'none'
     btnSiguienteTurno.style.display = 'block'
+
+    seccionAccion.innerHTML = ''
+    seccionLugar.innerHTML = ''
 
     let turnoAccion = aleatorio(0, dados.length - 1)
     let dado = dados[turnoAccion]
     let turnoLugar = aleatorio(0, dado.lugares.length - 1)
-    let lugar = dado.lugares[turnoLugar]    
+    let lugar = dado.lugares[turnoLugar]
     
+    var targetAngle = 0
+    
+    while(targetAngle <= 360){
+        changeRotate(seccionAccion, targetAngle)        
+        await timer(10);
+        targetAngle += STEP
+    }    
     seccionAccion.innerHTML = dado.accion
+
+    seccionLugar.style.display = 'flex'
+
+    targetAngle = 0
+    
+    while(targetAngle <= 360){
+        changeRotate(seccionLugar, targetAngle)        
+        await timer(10);
+        targetAngle += STEP
+    }
+    
     seccionLugar.innerHTML = lugar
 }
 
@@ -183,5 +198,14 @@ function iniciarDados() {
 function aleatorio(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+function changeRotate(item, val)
+{
+    item.style.transform = "rotate(" + val + "deg)";
+    item.style.webkitTransform = "rotate(" + val + "deg)";
+    item.style.mozTransform = "rotate(" + val + "deg)";
+}
+
+const timer = ms => new Promise(res => setTimeout(res, ms))
 
 window.addEventListener('load', iniciar)
