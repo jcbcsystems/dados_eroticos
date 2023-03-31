@@ -31,6 +31,8 @@ let dados = [
             "Nalgas",
             "Entre piernas",
             "Epalda baja",
+            "Clitoris/Pene",
+            "Cuello"
         ]
     },
     {
@@ -38,7 +40,8 @@ let dados = [
         lugares: [
             "Labios",
             "Senos/Tetillas",
-            "Vulva/Pene"
+            "Vulva/Pene",
+            "Cuello"
         ]
     },
     {
@@ -54,6 +57,7 @@ let dados = [
             "Entre Piernas",
             "Pies",
             "Nalgas",
+            "Clitoris/Pene",
         ]
     },
     {
@@ -64,6 +68,7 @@ let dados = [
             "Entre piernas",
             "Nalgas",
             "Muslos",
+            "Cuello"
         ]
     },
     {
@@ -74,6 +79,7 @@ let dados = [
             "Pomulo de orejas",
             "Senos/Tetillas",
             "Nalgas",
+            "Cuello"
         ]
     },
     {
@@ -81,11 +87,12 @@ let dados = [
         lugares: [
             "Labios",
             "Clitoris/Cabecita",
-            "Pomulo de orejas",
+            "Lobulo de orejas",
             "Senos/Tetillas",
             "Entre piernas",
             "Dedo de mano",
             "Nalgas",
+            "Cuello"
         ]
     },
     {
@@ -106,7 +113,8 @@ let dados = [
     {
         accion: "Masturbar",
         lugares: [
-            "Al contrario"
+            "Al contrario",
+            "Vagina/Pene"
         ]
     },
 ]
