@@ -158,7 +158,16 @@ function iniciarJuego(){
     
     jugadorTurno = jugadores[turno]
         
-    let jugadoresGeneroContrario = jugadores.filter((jugador) => jugador.genero !== jugadorTurno.genero)
+    let jugadoresGeneroContrario = jugadores.filter((jugador) => {
+        if(jugadorTurno.genero == 'C') {
+            if(jugador.genero == 'C' || jugador.genero == 'M') {
+                return jugador;
+            }            
+        } else if(jugador.genero != jugadorTurno.genero) {
+            return jugador;
+        }
+    })
+
     turno = aleatorio(0, jugadoresGeneroContrario.length - 1)
 
     jugadorTurnoContrario = jugadoresGeneroContrario[turno]
