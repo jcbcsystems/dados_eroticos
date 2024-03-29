@@ -159,7 +159,7 @@ function iniciarJuego(){
     jugadorTurno = jugadores[turno]
         
     let jugadoresGeneroContrario = jugadores.filter((jugador) => {
-        if(jugadorTurno.genero == 'C') {
+        if(jugadorTurno.genero == 'C' && jugadorTurno.nombre !== jugador.nombre) {
             if(jugador.genero == 'C' || jugador.genero == 'M') {
                 return jugador;
             }            
